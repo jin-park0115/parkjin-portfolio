@@ -8,7 +8,6 @@ const Profile = () => {
       </ImgStyle>
       <NameStyle>Park Jin</NameStyle>
       <IntroStyle>Frontend 개발자.</IntroStyle>
-      <WorkLink>Notion</WorkLink>
     </ProfileWrap>
   );
 };
@@ -35,31 +34,18 @@ const NameStyle = styled.p`
   font-weight: bold;
 `;
 
-const IntroStyle = styled.p`
-  font-size: 0.9rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-`;
-
-const WorkLink = styled.div`
+const IntroStyle = styled.div`
   position: relative;
   display: inline-block;
   padding: 4px 15px;
   border-radius: 9px;
   font-size: 0.9rem;
+  font-weight: 300;
   background-color: ${(props) => props.theme.linkButton};
   color: ${(props) => props.theme.linkText};
   overflow: hidden;
   cursor: pointer;
   transition: background-color 0.3s;
-
-  a {
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-    z-index: 1;
-  }
-
   &::after {
     content: "";
     position: absolute;
