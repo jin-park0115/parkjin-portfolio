@@ -9,7 +9,7 @@ import kioskImg from "./assets/toy08.png";
 export const toyData = [
   {
     image: `${janagganaImg}`,
-    link: "https://darling-wisp-5ba14c.netlify.app/",
+    link: "https://janaggana.netlify.app/",
     githublink: "https://github.com/jin-park0115/janaggana",
     title: "JanaGGana",
     subTitle: "영어 단어 외우기 웹/앱입니다.",
