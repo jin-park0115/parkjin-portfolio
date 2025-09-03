@@ -2,15 +2,15 @@ import styled from "styled-components";
 import { useInView } from "react-intersection-observer";
 
 const skills = [
-  { name: "HTML & CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React", level: 80 },
-  { name: "TypeScript", level: 75 },
-  { name: "Styled-Components", level: 75 },
-  { name: "Zustand", level: 65 },
-  { name: "Redux", level: 65 },
-  { name: "Axios", level: 65 },
-  { name: "Tailwind CSS", level: 50 },
+  { name: "HTML & CSS", level: 90, color: "#99649B" },
+  { name: "JavaScript", level: 85, color: "#F7DF1E" },
+  { name: "React", level: 80, color: "#61DAFB" },
+  { name: "TypeScript", level: 75, color: "#3178C6" },
+  { name: "Styled-Components", level: 75, color: "#DB7093" },
+  { name: "Zustand", level: 65, color: "#FFD400" },
+  { name: "Redux", level: 65, color: "#764ABC" },
+  { name: "Axios", level: 65, color: "#5A29E4" },
+  { name: "Tailwind CSS", level: 50, color: "#38BDF8" },
 ];
 
 const Skill = () => {
@@ -22,7 +22,7 @@ const Skill = () => {
       <SkillList>
         {skills.map((skill) => (
           <SkillItem key={skill.name}>
-            <SkillName>{skill.name}</SkillName>
+            <SkillName $color={skill.color}>{skill.name}</SkillName>
             <ProgressBar>
               <ProgressFill $level={inView ? skill.level : 0} />
             </ProgressBar>
@@ -68,6 +68,7 @@ const SkillName = styled.p`
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 0.4rem;
+  color: ${({ $color }) => $color || "#222"};
 `;
 
 const ProgressBar = styled.div`
